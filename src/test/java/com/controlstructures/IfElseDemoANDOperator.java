@@ -5,6 +5,7 @@ public class IfElseDemoANDOperator {
 
 	public static void main(String[] args) {
 
+		//example with multiple if..else conditions
 		int personAge = 15; // using assignment operator in java , Assigning a value to int variable
 
 		// AND - && operator
