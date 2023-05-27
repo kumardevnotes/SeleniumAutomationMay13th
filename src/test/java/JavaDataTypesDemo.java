@@ -1,11 +1,11 @@
 
-public class MyJavaDemo {
+public class JavaDataTypesDemo {
 
 	public static void main(String[] args) {
 		System.out.println("Printing employee details");
 		// empName, empID, empGender, empMaritalStatus, empSal, EmpIncentive
 		//Java data types 
-		String empName = "John Miller";
+		String empName = "John Miller"; //Java string is a group of characters
 		int empId = 112233; // Integers -3 -2 -1 0 1 2 3 ....99 100....1120 1121 1122.. infinite
 		char empgender = 'M'; // character
 		boolean empMaritalStatus = false; // true --> unmarried

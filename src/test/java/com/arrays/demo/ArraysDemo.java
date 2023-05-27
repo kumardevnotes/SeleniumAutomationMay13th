@@ -13,7 +13,7 @@ public class ArraysDemo {
 		//Arrays - Arrays store multiple values into a single variable
 		//Arrays store same type of data or homogeneous data 
 		
-		int empIds[] = {1122, 2233, 3344, 5566, 6677, 445566, 876, 909, 8989};
+		int empIds[] = {1122, 2233, 3344, 5566, 6677, 445566, 876, 909, 8989, 1001};
 		
 		/*System.out.println( empIds[0]);
 		System.out.println( empIds[1]);
