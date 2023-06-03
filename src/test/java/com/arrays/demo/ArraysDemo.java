@@ -15,6 +15,9 @@ public class ArraysDemo {
 		
 		int empIds[] = {1122, 2233, 3344, 5566, 6677, 445566, 876, 909, 8989, 1001};
 		
+		//Below line will throw error. As array is fixed in size
+		//empIds[10]  = 1000;
+		
 		/*System.out.println( empIds[0]);
 		System.out.println( empIds[1]);
 		System.out.println( empIds[2]);

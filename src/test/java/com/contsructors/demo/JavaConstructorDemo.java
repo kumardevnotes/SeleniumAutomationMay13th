@@ -8,7 +8,6 @@ public class JavaConstructorDemo {
 		System.out.println("I am default constructor");
 	}
 	
-	
 	//below is a  String Parameterized constructor
 	JavaConstructorDemo(String message){ 
 		System.out.println("I am parameterized constructor with some message "+ message);
