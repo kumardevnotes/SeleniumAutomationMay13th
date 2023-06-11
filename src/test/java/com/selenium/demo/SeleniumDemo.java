@@ -8,29 +8,26 @@ public class SeleniumDemo {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		//To get root folder in your computer
-		String rootFolder = System.getProperty("user.dir");
-		
-		//to set the chrome driver property
-		System.setProperty("webdriver.chrome.driver", rootFolder + "//src//test//java//com//resources//chromedriver.exe");
+		//To set driver property
+		String rootFolder  = System.getProperty("user.dir");
+		System.setProperty("webdriver.chrome.driver", rootFolder+"//src//test//java//com//resources//chromedriver.exe");
 		
 		//Browser is launched
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		WebDriver driver = new ChromeDriver(options);
 		
-		//Browser is maximized
+		//maximize the browser
 		driver.manage().window().maximize();
 		
-		//Browser launches Rediff email login page
-		driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
+		//To launch an application by passing app URL as parameter in below get(String appUrl)
+		driver.get("https://google.co.in");
+		Thread.sleep(3000); // 3000 ms = 3 sec
+		driver.get("https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/4.4.0");
+		Thread.sleep(3000);
 		
-		//Wait for 5 seconds
-		Thread.sleep(5000); // 4000ms = 4seconds
-		
-		//This will close the browsers
-		driver.close();
-
+		//to close browser
+		driver.quit();
 	}
 
 }

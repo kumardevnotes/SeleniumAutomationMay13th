@@ -29,6 +29,7 @@ public class ArraysDemo {
 		System.out.println( empIds[8]);  // length -1  = 9 -1 = 8
 		*/
 		
+		//classic forloop
 		for (int i = 0; i < empIds.length; i++) { // 9 ; 9 < 9
 			System.out.println(empIds[i]); //empIds[1]
 		}
