@@ -8,7 +8,7 @@ public class SeleniumDemo {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		//To set driver property
+		//To set driver property to launch chrome browser
 		String rootFolder  = System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver", rootFolder+"//src//test//java//com//resources//chromedriver.exe");
 		
