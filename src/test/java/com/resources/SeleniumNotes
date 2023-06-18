@@ -1,0 +1,111 @@
+
+Add Selenium (WebDriver 4.0) lib/jar/dependency into your project
+   - Selenium automates web aps but not desktopapps
+   - Mobile apps can be automated using appium which is a wrapper on Selenium
+Check your browser version and get the required driver file - 112.0.5615     
+Create a TestNg class, create testcase and then add Selenium script
+Then run testcase and check the report/result
+
+Selenium Architecture diagram: https://www.softwaretestingmaterial.com/wp-content/uploads/2017/12/Selenium-WebDriver-Architecture.png
+
+DOM - document  object locator or HTML window
+
+Selenium Locators:
+
+id
+name
+className
+tagName
+linkText
+partialLinkText
+
+
+xPath
+CSSSelector --
+
+xPath -->  Absolute xpath which starts with / - This is not recommended
+           /html/body/div[1]/div[1]/div[4]/ul/li[2]/a
+           
+            
+           Relative xpath which starts with //
+           //a[text()='Sign up']  --> Exact text match
+           //a[.='Sign up']  --> Exact text match
+           
+           //a[contains(text(),'Sign up')] --> Partial text match
+           
+           //li[@id='nav_signup']  --> Attribute based xpath
+           //li[@class='class_signup'] 
+           //li[@name='nav_signup'] 
+           //li[@title='title'] 
+           
+           //li[@id='nav_signup']/a  --> Parent to child
+           //a[.='Sign up']/..  --> Child to its parent
+           
+           (//p[@class='site_link']/a)[2] --> Index based. Trying to locate second element out of all matchings
+           
+           (//p[@class='site_link']/a)[1]    --> to locate first matching element 
+           (//p[@class='site_link']/a)[last()] --> to locate last matching element
+
+           //a[.='Privacy policy']/following-sibling::a
+           //a[.='Terms of use']/preceding-sibling::a
+           
+           //*    --> All the tags in the DOM -  document object model
+           //a   ---> It locates all the anchor tags in the screen
+
+
+
+    ::Selenium methods::
+
+get(String url) --> This method launches your application
+navigate().back() --> this method navigates back the browser
+navigate().forward() --> this method navigates forwards the browser
+navigate().refresh() --> this method refreshed the browser
+maximize() --> This method will maximize the browser
+
+newWindow(WindowType.TAB) --> // Opens a new tab and switches to new tab
+
+close() --> It will close current window
+quit() --> It will close all opned windows
+
+Dimension dimension = new Dimension(1920, 1080);
+setSize(dimension) --> This method will resie the window depending on the dimensions passed
+
+sendKeys(String value) --> This method is used to pass the string value into a text field
+click() --> Used to click on a given element
+
+getText() --> This method is sued to get the text on the screen or web page
+getTitle() --> To get the title of the web page
+getAttribute() 	--> This method is used to get the attribute val 
+getPageUrl() ---> This method gives the page Url
+
+JavascriptExecutor - Used this in ScrollToElement example
+
+
+
+Actions class in Selenium
+mouseHover() --> 
+dragDrop() --> Drag from source and drop it in destination
+
+Alert.accept()-->
+Alert.dismiss()-->
+
+findElement()-->
+findElements()-->
+
+getWindowHandle()-->
+getWindowHandles()-->
+switchToWindow()-->
+
+Select class in Selenium
+SelectByIndex()-->
+SelectBYValue()-->
+SelectByVisibleText()-->
+
+capture screenshot
+
+   ::
+   
+Page Object Model  - POM  -  it is a Design pattern - it is a best practice in automation
+pom.xml - > Project Object Model . It is an xml based project document
+            -  you will add your dependencies/plugins/configurations
+
