@@ -38,6 +38,8 @@ xPath -->  Absolute xpath which starts with / - This is not recommended
            //li[@name='nav_signup'] 
            //li[@title='title'] 
            
+           //li[@abc='xyz']
+           
            //li[@id='nav_signup']/a  --> Parent to child
            //a[.='Sign up']/..  --> Child to its parent
            
@@ -77,6 +79,7 @@ getText() --> This method is sued to get the text on the screen or web page
 getTitle() --> To get the title of the web page
 getAttribute() 	--> This method is used to get the attribute val 
 getPageUrl() ---> This method gives the page Url
+
 
 JavascriptExecutor - Used this in ScrollToElement example
 
