@@ -1,0 +1,11 @@
+
+AppURL: https://www.speaklanguages.com/
+App UserEmailID=johnnitesh2@gmail.com
+App password=Testing@123
+
+TC1: Verify landing page
+TC2: Verify login successful for valid logins
+TC3: Verify Sign up is successful for a new user
+
+TC2 - Assignment from 25th June class:
+ after login, capture logged in username using getText() and verify this using if..else

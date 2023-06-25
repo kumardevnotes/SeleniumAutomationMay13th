@@ -3,8 +3,7 @@
 <suite name="DemoSuite" verbose="1" >
   <test name="DemoTest">
     <classes>
-      <class name="com.testng.demo.TestNGDemoCrossBrowser"/>
-      <class name="com.testng.demo.SpeakLangTests"/>
+      <class name="com.testng.demo.MyAppTests"/>
     </classes>
   </test>
 </suite>
