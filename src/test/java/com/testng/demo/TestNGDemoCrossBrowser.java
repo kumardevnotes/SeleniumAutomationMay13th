@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class TestNGDemoCrossBrowser {
   
 	//Cross browser testing. You run the same testcase in 2 different browsers
-  @Test
+  @Test (groups = { "Smoke", "Regression" })
   public void speakLangInChrome() throws InterruptedException {
 		//To set driver property to launch chrome browser
 		String rootFolder  = System.getProperty("user.dir");
@@ -29,7 +29,7 @@ public class TestNGDemoCrossBrowser {
 		driver.quit(); //driver.close()
   }
   
-  @Test
+  @Test (groups = { "Smoke" })
   public void speakLangInEdge() throws InterruptedException {
 	//To set driver property to launch Edge browser
 			String rootFolder  = System.getProperty("user.dir");

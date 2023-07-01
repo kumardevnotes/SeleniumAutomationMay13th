@@ -2,44 +2,76 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-01T20:08:35 IST" name="DemoSuite" finished-at="2023-07-01T20:09:10 IST" duration-ms="34832">
+  <suite started-at="2023-07-01T23:00:23 ICT" name="DemoSuite" finished-at="2023-07-01T23:00:59 ICT" duration-ms="36305">
     <groups>
+      <group name="Regression">
+        <method signature="MyAppTests.verifyLandingPage()[pri:2, instance:com.testng.demo.MyAppTests@614ca7df]" name="verifyLandingPage" class="com.testng.demo.MyAppTests"/>
+        <method signature="MyAppTests.verifyLogin()[pri:3, instance:com.testng.demo.MyAppTests@614ca7df]" name="verifyLogin" class="com.testng.demo.MyAppTests"/>
+        <method signature="MyAppTests.verifySignup()[pri:1, instance:com.testng.demo.MyAppTests@614ca7df]" name="verifySignup" class="com.testng.demo.MyAppTests"/>
+      </group> <!-- Regression -->
+      <group name="LoginModule">
+        <method signature="MyAppTests.verifyLandingPage()[pri:2, instance:com.testng.demo.MyAppTests@614ca7df]" name="verifyLandingPage" class="com.testng.demo.MyAppTests"/>
+      </group> <!-- LoginModule -->
+      <group name="SignUpModule">
+        <method signature="MyAppTests.verifySignup()[pri:1, instance:com.testng.demo.MyAppTests@614ca7df]" name="verifySignup" class="com.testng.demo.MyAppTests"/>
+      </group> <!-- SignUpModule -->
     </groups>
-    <test started-at="2023-07-01T20:08:35 IST" name="DemoTest" finished-at="2023-07-01T20:09:10 IST" duration-ms="34832">
+    <test started-at="2023-07-01T23:00:23 ICT" name="DemoTest" finished-at="2023-07-01T23:00:59 ICT" duration-ms="36305">
       <class name="com.testng.demo.MyAppTests">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.testng.demo.MyAppTests@35aea049]" started-at="2023-07-01T20:08:35 IST" name="beforeMethod" finished-at="2023-07-01T20:08:40 IST" duration-ms="5216" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.testng.demo.MyAppTests@614ca7df]" started-at="2023-07-01T23:00:23 ICT" name="beforeMethod" finished-at="2023-07-01T23:00:29 ICT" duration-ms="6702" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyLandingPage()[pri:0, instance:com.testng.demo.MyAppTests@35aea049]" started-at="2023-07-01T20:08:40 IST" name="verifyLandingPage" finished-at="2023-07-01T20:08:40 IST" duration-ms="175" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLandingPage -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.testng.demo.MyAppTests@35aea049]" started-at="2023-07-01T20:08:40 IST" name="afterMethod" finished-at="2023-07-01T20:08:41 IST" duration-ms="801" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.testng.demo.MyAppTests@35aea049]" started-at="2023-07-01T20:08:41 IST" name="beforeMethod" finished-at="2023-07-01T20:08:48 IST" duration-ms="6605" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyLogin()[pri:0, instance:com.testng.demo.MyAppTests@35aea049]" started-at="2023-07-01T20:08:48 IST" name="verifyLogin" finished-at="2023-07-01T20:08:55 IST" duration-ms="6887" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.testng.demo.MyAppTests@35aea049]" started-at="2023-07-01T20:08:55 IST" name="afterMethod" finished-at="2023-07-01T20:08:55 IST" duration-ms="724" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.testng.demo.MyAppTests@35aea049]" started-at="2023-07-01T20:08:55 IST" name="beforeMethod" finished-at="2023-07-01T20:08:58 IST" duration-ms="3076" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="verifySignup()[pri:0, instance:com.testng.demo.MyAppTests@35aea049]" started-at="2023-07-01T20:08:58 IST" name="verifySignup" finished-at="2023-07-01T20:09:09 IST" duration-ms="10541" status="PASS">
+        <test-method signature="verifySignup()[pri:1, instance:com.testng.demo.MyAppTests@614ca7df]" started-at="2023-07-01T23:00:29 ICT" name="verifySignup" finished-at="2023-07-01T23:00:40 ICT" duration-ms="10691" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySignup -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.testng.demo.MyAppTests@35aea049]" started-at="2023-07-01T20:09:09 IST" name="afterMethod" finished-at="2023-07-01T20:09:10 IST" duration-ms="768" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.testng.demo.MyAppTests@614ca7df]" started-at="2023-07-01T23:00:40 ICT" name="afterMethod" finished-at="2023-07-01T23:00:41 ICT" duration-ms="850" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.testng.demo.MyAppTests@614ca7df]" started-at="2023-07-01T23:00:41 ICT" name="beforeMethod" finished-at="2023-07-01T23:00:46 ICT" duration-ms="4794" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyLandingPage()[pri:2, instance:com.testng.demo.MyAppTests@614ca7df]" started-at="2023-07-01T23:00:46 ICT" name="verifyLandingPage" finished-at="2023-07-01T23:00:46 ICT" duration-ms="165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLandingPage -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.testng.demo.MyAppTests@614ca7df]" started-at="2023-07-01T23:00:46 ICT" name="afterMethod" finished-at="2023-07-01T23:00:47 ICT" duration-ms="840" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.testng.demo.MyAppTests@614ca7df]" started-at="2023-07-01T23:00:47 ICT" name="beforeMethod" finished-at="2023-07-01T23:00:51 ICT" duration-ms="4490" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyLogin()[pri:3, instance:com.testng.demo.MyAppTests@614ca7df]" started-at="2023-07-01T23:00:51 ICT" name="verifyLogin" finished-at="2023-07-01T23:00:58 ICT" duration-ms="6812" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.testng.demo.MyAppTests@614ca7df]" started-at="2023-07-01T23:00:58 ICT" name="afterMethod" finished-at="2023-07-01T23:00:59 ICT" duration-ms="922" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
