@@ -24,6 +24,7 @@ public class SignUpPage {
 	public static By monthLocator = By.name("dob_month");
 	public static By yearLocator = By.name("dob_year");
 	public static By signUpLocator = By.xpath("//input[@value='Sign up']");
+	public static By signUpSuccessLocator = By.xpath("//h1[contains(text(),'Thank you')]");
 
 	public void signUpWithApp() throws InterruptedException {
 		
@@ -54,5 +55,9 @@ public class SignUpPage {
 		driver.findElement(signUpLocator).click();
 		Thread.sleep(8000);
 		
+	}
+	
+	public String getSignupSuccessMessage() throws InterruptedException {
+		return driver.findElement(signUpSuccessLocator).getText();
 	}
 }

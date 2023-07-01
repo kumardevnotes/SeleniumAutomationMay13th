@@ -9,7 +9,10 @@ import com.app.pages.SignUpPage;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.Properties;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -64,23 +67,54 @@ public class MyAppTests {
 	}
 
 	@Test
-	public void verifyLogin() throws InterruptedException {
+	public void verifyLogin() throws InterruptedException, IOException {
 		LandingPage landingPageObj = new LandingPage(driver);
 		LoginPage loginPageObj = new LoginPage(driver);
 
 		landingPageObj.navigateToLogin();
 
-		loginPageObj.loginIntoApp("johnnitesh2@gmail.com", "Testing@123");
+		String rootFolder = System.getProperty("user.dir");
+		FileReader myFile = new FileReader(rootFolder + "//src//test//java//com//resources//appData.properties");
+		Properties props = new Properties();
+		props.load(myFile);
 
-		System.out.println("verifyLogin is tested and found no issues");
+		loginPageObj.loginIntoApp(props.getProperty("appUserEmailID"), props.getProperty("apppassword"));
+
+		String loggedInUserNameExpected = props.getProperty("appUserName"); // nitesh
+
+		String loggedInUserNameActual = loginPageObj.getLoggedInUserName();
+
+		// after login, capture logged in username using getText() and verify this using
+		// if..else
+
+		if (loggedInUserNameExpected.equals(loggedInUserNameActual)) {
+			System.out.println("verifyLogin is tested and found no issues");
+		} else {
+			String failedMessage = "verifyLogin is not successful. Please check";
+			System.out.println(failedMessage);
+			captureScreenshot(driver, "verifyLogin");
+			Assert.fail(failedMessage);
+		}
 	}
 
-	@Test (invocationCount = 2)
-	public void verifySignup() throws InterruptedException {
+	@Test(invocationCount = 1)
+	public void verifySignup() throws InterruptedException, IOException {
 		LandingPage landingPageObj = new LandingPage(driver);
 		SignUpPage signUpPage = new SignUpPage(driver);
 		landingPageObj.navigateToSignup();
 		signUpPage.signUpWithApp();
+
+		String signUpSuccessMessage = signUpPage.getSignupSuccessMessage(); //""
+
+		if (!signUpSuccessMessage.isEmpty()) { // true
+			System.out.println("verifySignup is tested and found no issues");
+		} else {
+			String failedMessage = "verifySignup is not successful. Please check";
+			System.out.println(failedMessage);
+			captureScreenshot(driver, "verifySignup");
+			Assert.fail(failedMessage);
+		}
+
 	}
 
 	@AfterMethod
